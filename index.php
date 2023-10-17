@@ -1,5 +1,5 @@
 <!-- inclusion de el script que permite realizar la conexion a bd -->
-<?php include_once("includes/db.php");  ?>
+<?php include_once("includes/survey.php");  ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,8 +12,30 @@
 </head>
 <body>
     <form action="#" method="post">
+        <?php
+        $survey = new Survey();
+        $showResult = false;
+            if (isset($_POST['language'])) {
+                $showResult = true;
+                $survey->setOptionSelected($_POST['language']);
+                $survey->vote();
+            }
+
+            // echo $survey->getTotalVotes();
+        ?>
         <h2>What is your favorite programming language?</h2>
 
+        <?php
+            if ($showResult == true) {
+                $languages = $survey->showResult();
+                echo '<h2>'. $survey->getTotalVotes().' total votes</h2>';
+
+                foreach ($languages as $language) {
+                    $percentage = $survey->getPercentageVotes($language['votes']);
+                    include "view/view_results.php";
+                }
+            }
+        ?>
         <!-- obciones de la encuesta -->
         <input type="radio" name="language" id="" value="c"> C <br>
         <input type="radio" name="language" id="" value="c++"> C++ <br>

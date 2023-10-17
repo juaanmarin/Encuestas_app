@@ -23,6 +23,8 @@
                 
                 $pdo = new PDO($connection, $this->user, $this->password, $options);
 
+                return $pdo;
+
             } catch (PDOExeption $e) {
                 print_r("Error connection: ". $e->getMessage());
             }
