@@ -4,26 +4,20 @@ body{
 form{
     background-color: aliceblue;
     margin: 0;
-    width: 500px;
+    width: 600px;
     padding: 20px;
 }
 .option{
     padding: 5px 0;
 }
-/* .barrita{
-    background-color: dodgerblue;
-    border-radius: 4px;
-    padding: 10px;
-} */
 .barra{
-    background-color: deepskyblue;
+    background-color: #00aeff75;
     border-radius: 4px;
     padding: 10px;
 }
-/* .selecion{
-    background-color: dodgerblue;
+.barra_selected{
+    background-color: #2196f3;
     border-radius: 4px;
-   
     padding: 10px;
-} */
+}
   

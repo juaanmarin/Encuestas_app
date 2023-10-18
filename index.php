@@ -34,17 +34,13 @@
                     $percentage = $survey->getPercentageVotes($language['votes']);
                     include "view/view_results.php";
                 }
+            }else{
+                //obciones de la encuesta
+                include "view/view_survey.php";
             }
         ?>
-        <!-- obciones de la encuesta -->
-        <input type="radio" name="language" id="" value="c"> C <br>
-        <input type="radio" name="language" id="" value="c++"> C++ <br>
-        <input type="radio" name="language" id="" value="java"> Java <br>
-        <input type="radio" name="language" id="" value="swift"> Swift <br>
-        <input type="radio" name="language" id="" value="python"> Python <br>
-
-        <!-- boton para votar -->
-        <input type="submit" value="vote!">
+        
+        
     </form>
 
     <!-- prueba de la conexion a la bd-->
