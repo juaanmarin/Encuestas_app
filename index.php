@@ -11,7 +11,7 @@
     <title>survey</title>
 </head>
 <body>
-    <form action="#" method="post">
+    <form class="form" action="#" method="post">
         <?php
         $survey = new Survey();
         $showResult = false;
@@ -28,7 +28,7 @@
         <?php
             if ($showResult == true) {
                 $languages = $survey->showResult();
-                echo '<h2>'. $survey->getTotalVotes().' total votes</h2>';
+                echo '<div class="title2"> <h3> total votes : '.$survey->getTotalVotes().'</h3> </div>';
 
                 foreach ($languages as $language) {
                     $percentage = $survey->getPercentageVotes($language['votes']);
@@ -39,7 +39,6 @@
                 include "view/view_survey.php";
             }
         ?>
-        
         
     </form>
 

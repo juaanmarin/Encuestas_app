@@ -1,11 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body{
     font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 form{
     background-color: aliceblue;
     margin: 0;
     width: 600px;
     padding: 20px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.vote{
+    border: none;
+    width: 100px;
+    height: 30px;
+    font-size: 15px;
+    border-radius: 5px;
+    background-color: gold;
+    cursor: pointer;
+    transition: 700ms;
+}
+.vote:hover{
+    width: 103px;
+    height: 33px;
+    font-size: 18px;
+    border-radius: 0px;
+    background-color: rgb(236, 206, 32);
 }
 .option{
     padding: 5px 0;
@@ -19,5 +49,13 @@ form{
     background-color: #2196f3;
     border-radius: 4px;
     padding: 10px;
+}
+.radio{
+    cursor: pointer;
+}
+.title2{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
 }
   
